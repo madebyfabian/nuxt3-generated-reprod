@@ -1,10 +1,14 @@
-export const config = {
-	runtime: 'edge', // this is a pre-requisite
-}
+import type { VercelRequest, VercelResponse } from '@vercel/node'
 
-export default (req: Request) => {
-	const env = $env
-	return new Response(
-		`Hello, from ${req.url} I'm now an Edge Function! ${JSON.stringify(env)}`
-	)
+export default function handler(
+	request: VercelRequest,
+	response: VercelResponse
+) {
+	const env = process.env
+	response.status(200).json({
+		body: request.body,
+		query: request.query,
+		cookies: request.cookies,
+		env,
+	})
 }
