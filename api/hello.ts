@@ -4,5 +4,7 @@ export const config = {
 
 export default (req: Request) => {
 	const env = process.env
-	return new Response(`Hello, from ${req.url} I'm now an Edge Function! ${env}`)
+	return new Response(
+		`Hello, from ${req.url} I'm now an Edge Function! ${JSON.stringify(env)}`
+	)
 }
