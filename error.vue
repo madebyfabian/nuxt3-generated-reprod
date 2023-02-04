@@ -6,7 +6,7 @@
 			header is missing!
 		</p>
 		<pre>these props are cool to get some info: {{ props }}</pre>
-		<NuxtLink to="/">Home</NuxtLink>
+		<button @click="handleError">Go home</button>
 	</div>
 </template>
 
@@ -14,4 +14,6 @@
 	const props = defineProps({
 		error: Object,
 	})
+
+	const handleError = () => clearError({ redirect: '/' })
 </script>
