@@ -3,7 +3,11 @@
 		Home Page
 		<br />
 		<NuxtLink to="/about">About</NuxtLink>
-		<br />
-		<NuxtLink to="/blahh">Will be 404</NuxtLink>
 	</div>
 </template>
+
+<script lang="ts" setup>
+	definePageMeta({
+		title: 'Home Page',
+	})
+</script>
