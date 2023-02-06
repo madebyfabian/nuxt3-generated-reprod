@@ -4,8 +4,6 @@
 		<br />
 		<NuxtLink to="/about">About</NuxtLink>
 		<br />
-		<NuxtLink to="/blahh">Will be 404</NuxtLink>
-		<br />
 		<hr />
 		<br />
 		<h1>Test Image</h1>
